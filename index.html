@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VTU projects - Study Resources</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+       
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">
+            <h1>VTU Projects</h1>
+        </div>
+        <div class="nav-links">
+            <a href="#hero" class="border-effect">Home</a>
+            <a href="#notes" class="border-effect">Notes</a>
+            <a href="#projects">Projects</a>
+            <a href="#blog" class="border-effect">Blog</a>
+        </div>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero" id="hero">
+        <h1>Welcome to VTU Projects</h1>
+        <p>Your one-stop destination for engineering resources</p>
+    </header>
+
+    <!-- Search Section -->
+    <section class="search-section">
+        <div class="search-container">
+            <div class="search-wrapper">
+                <div class="search-input-wrapper">
+                    <input type="text" id="searchInput" placeholder="Search notes...">
+                    <button class="search-clear" aria-label="Clear search">
+                        <i class="fas fa-times"></i>
+                    </button>
+                    <button class="search-button" aria-label="Search">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                <div class="filters">
+                    <div class="select-wrapper">
+                        <select id="branchFilter" required>
+                            <option value="" selected disabled></option>
+                            <option value="CSE">Computer Science</option>
+                            <option value="ISE">Information Science</option>
+                            <option value="ECE">Electronics & Communication</option>
+                            <option value="EEE">Electrical & Electronics</option>
+                            <option value="MECH">Mechanical Engineering</option>
+                            <option value="CIVIL">Civil Engineering</option>
+                        </select>
+                        <label class="select-label">Select Branch</label>
+                    </div>
+
+                    <div class="select-wrapper">
+                        <select id="schemeFilter" required>
+                            <option value="" selected disabled></option>
+                            <option value="2021">2021 Scheme</option>
+                            <option value="2018">2018 Scheme</option>
+                            <option value="2015">2015 Scheme</option>
+                        </select>
+                        <label class="select-label">Select Scheme</label>
+                    </div>
+
+                    <div class="select-wrapper">
+                        <select id="semesterFilter" required>
+                            <option value="" selected disabled></option>
+                            <option value="1">1st Semester</option>
+                            <option value="2">2nd Semester</option>
+                            <option value="3">3rd Semester</option>
+                            <option value="4">4th Semester</option>
+                            <option value="5">5th Semester</option>
+                            <option value="6">6th Semester</option>
+                            <option value="7">7th Semester</option>
+                            <option value="8">8th Semester</option>
+                        </select>
+                        <label class="select-label">Select Semester</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Notes Section -->
+    <section id="notes" class="notes-section scroll-reveal">
+        <h2>Subject Notes</h2>
+        <div class="notes-container">
+            <div class="subject-card">
+                <div class="subject-header">
+                    <h3>Data Structures and Applications</h3>
+                    <div class="subject-meta">
+                        <span class="subject-code">21CS32</span>
+                        <span class="credits">4 Credits</span>
+                    </div>
+                </div>
+                <div class="modules-grid">
+                    <div class="module-card">
+                        <div class="module-header">
+                            <h4>Module 1</h4>
+                            <span class="module-duration">8 Hours</span>
+                        </div>
+                        <p>Introduction to Data Structures, Arrays and Strings</p>
+                        <div class="module-actions">
+                            <a href="#" class="view-notes">View Notes</a>
+                            <a href="#" class="download-notes">Download</a>
+                        </div>
+                    </div>
+                    
+                    <div class="module-card">
+                        <div class="module-header">
+                            <h4>Module 2</h4>
+                            <span class="module-duration">10 Hours</span>
+                        </div>
+                        <p>Linked Lists and Applications</p>
+                        <div class="module-actions">
+                            <a href="#" class="view-notes">View Notes</a>
+                            <a href="#" class="download-notes">Download</a>
+                        </div>
+                    </div>
+                    
+                    <div class="module-card">
+                        <div class="module-header">
+                            <h4>Module 3</h4>
+                            <span class="module-duration">8 Hours</span>
+                        </div>
+                        <p>Stacks and Queues</p>
+                        <div class="module-actions">
+                            <a href="#" class="view-notes">View Notes</a>
+                            <a href="#" class="download-notes">Download</a>
+                        </div>
+                    </div>
+                    
+                    <div class="module-card">
+                        <div class="module-header">
+                            <h4>Module 4</h4>
+                            <span class="module-duration">10 Hours</span>
+                        </div>
+                        <p>Trees and Applications</p>
+                        <div class="module-actions">
+                            <a href="#" class="view-notes">View Notes</a>
+                            <a href="#" class="download-notes">Download</a>
+                        </div>
+                    </div>
+                    
+                    <div class="module-card">
+                        <div class="module-header">
+                            <h4>Module 5</h4>
+                            <span class="module-duration">8 Hours</span>
+                        </div>
+                        <p>Graphs and Applications</p>
+                        <div class="module-actions">
+                            <a href="#" class="view-notes">View Notes</a>
+                            <a href="#" class="download-notes">Download</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="subject-resources">
+                    <a href="${subject.syllabus}" class="resource-link syllabus-link">
+                        <i class="fas fa-book"></i> Syllabus
+                    </a>
+                    <div class="model-papers-dropdown">
+                        <button class="model-papers-btn">
+                            <i class="fas fa-file-alt"></i> Important Questions
+                        </button>
+                        <div class="model-papers-content">
+                            ${subject.modelPapers.map(paper => `
+                                <a href="${paper.url}" class="model-paper-link">
+                                    ${paper.year} Question Paper
+                                </a>
+                            `).join('')}
+                        </div>
+                    </div>
+                    <div class="model-papers-dropdown">
+                        <button class="model-papers-btn">
+                            <i class="fas fa-graduation-cap"></i> Learning Resources
+                        </button>
+                        <div class="model-papers-content">
+                            ${subject.importantNotes.map(note => `
+                                <a href="${note.url}" class="model-paper-link">
+                                    ${note.title}
+                                </a>
+                            `).join('')}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects scroll-reveal">
+        <h2>Featured Projects</h2>
+        <div class="project-grid">
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="https://source.unsplash.com/800x600/?technology" alt="Project 1">
+                </div>
+                <div class="project-content">
+                    <span class="project-tag">Web Development</span>
+                    <h3>Smart Home Automation</h3>
+                    <p>IoT-based home automation system using Arduino and React for real-time monitoring and control.</p>
+                    <div class="project-tech">
+                        <span>Arduino</span>
+                        <span>React</span>
+                        <span>IoT</span>
+                    </div>
+                    <a href="#" class="project-link">View Project →</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="https://source.unsplash.com/800x600/?artificial-intelligence" alt="Project 2">
+                </div>
+                <div class="project-content">
+                    <span class="project-tag">AI/ML</span>
+                    <h3>Face Recognition System</h3>
+                    <p>Deep learning-based facial recognition system with real-time detection and authentication.</p>
+                    <div class="project-tech">
+                        <span>Python</span>
+                        <span>TensorFlow</span>
+                        <span>OpenCV</span>
+                    </div>
+                    <a href="#" class="project-link">View Project →</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="https://source.unsplash.com/800x600/?robotics" alt="Project 3">
+                </div>
+                <div class="project-content">
+                    <span class="project-tag">Robotics</span>
+                    <h3>Autonomous Robot</h3>
+                    <p>Self-navigating robot using ROS and computer vision for obstacle avoidance and path planning.</p>
+                    <div class="project-tech">
+                        <span>ROS</span>
+                        <span>Python</span>
+                        <span>Computer Vision</span>
+                    </div>
+                    <a href="#" class="project-link">View Project →</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="https://source.unsplash.com/800x600/?mobile-app" alt="Project 4">
+                </div>
+                <div class="project-content">
+                    <span class="project-tag">Mobile App</span>
+                    <h3>Student Portal App</h3>
+                    <p>Cross-platform mobile application for students to access course materials and track attendance.</p>
+                    <div class="project-tech">
+                        <span>Flutter</span>
+                        <span>Firebase</span>
+                        <span>Node.js</span>
+                    </div>
+                    <a href="#" class="project-link">View Project →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="blog scroll-reveal">
+        <h2>Latest Tech Updates</h2>
+        <div class="blog-grid">
+            <article class="blog-card">
+                <div class="blog-image">
+                    <img src="https://source.unsplash.com/800x600/?artificial-intelligence" alt="AI Update">
+                    <span class="blog-category">AI & ML</span>
+                </div>
+                <div class="blog-content">
+                    <div class="blog-meta">
+                        <span class="date">March 15, 2024</span>
+                        <span class="read-time">5 min read</span>
+                    </div>
+                    <h3>Advances in Machine Learning</h3>
+                    <p>Latest breakthroughs in machine learning algorithms and their applications in engineering.</p>
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+            </article>
+
+            <article class="blog-card">
+                <div class="blog-image">
+                    <img src="https://source.unsplash.com/800x600/?blockchain" alt="Blockchain">
+                    <span class="blog-category">Blockchain</span>
+                </div>
+                <div class="blog-content">
+                    <div class="blog-meta">
+                        <span class="date">March 14, 2024</span>
+                        <span class="read-time">4 min read</span>
+                    </div>
+                    <h3>Web3 Development Trends</h3>
+                    <p>Exploring the latest trends in blockchain technology and decentralized applications.</p>
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+            </article>
+
+            <article class="blog-card">
+                <div class="blog-image">
+                    <img src="https://source.unsplash.com/800x600/?cybersecurity" alt="Cybersecurity">
+                    <span class="blog-category">Security</span>
+                </div>
+                <div class="blog-content">
+                    <div class="blog-meta">
+                        <span class="date">March 13, 2024</span>
+                        <span class="read-time">6 min read</span>
+                    </div>
+                    <h3>Cybersecurity Best Practices</h3>
+                    <p>Essential security practices every engineering student should know in 2024.</p>
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+            </article>
+
+            <article class="blog-card">
+                <div class="blog-image">
+                    <img src="https://source.unsplash.com/800x600/?iot" alt="IoT">
+                    <span class="blog-category">IoT</span>
+                </div>
+                <div class="blog-content">
+                    <div class="blog-meta">
+                        <span class="date">March 12, 2024</span>
+                        <span class="read-time">3 min read</span>
+                    </div>
+                    <h3>Future of IoT Technologies</h3>
+                    <p>How Internet of Things is shaping the future of engineering and automation.</p>
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 VTU Projects. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="data.js"></script>
+</body>
+</html> 
