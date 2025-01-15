@@ -293,7 +293,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Add this to your existing script.js
+    
     function updateActiveNavLink() {
         const sections = document.querySelectorAll('section, .hero');
         const navLinks = document.querySelectorAll('.nav-links a');

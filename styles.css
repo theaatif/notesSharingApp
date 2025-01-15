@@ -1160,17 +1160,21 @@ html {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
+    position: relative;
     transition: all 0.3s ease;
+   
 }
+
 
 .read-more::after {
-    content: '→';
-    transition: transform 0.3s ease;
+    content: '→'; 
+    transition: margin-left 0.3s ease;
 }
 
-.read-more:hover::after {
-    transform: translateX(5px);
+.read-more:hover {
+    transform: translateX(5px); 
 }
+
 
 /* Hover effects */
 .blog-card::before {
