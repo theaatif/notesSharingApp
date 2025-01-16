@@ -25,7 +25,7 @@ body {
     padding-top: 0;
 }
 
-/* Enhanced Navigation */
+/* Navigation */
 nav {
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
@@ -98,12 +98,6 @@ nav {
     color: white;
 }
 
-/*  hover effect - Option 2: Glow effect */
-.nav-links a.glow-effect {
-    transition: all 0.3s ease;
-}
-
-
 
 /* Border animation  */
 .nav-links a.border-effect {
@@ -111,7 +105,7 @@ nav {
 }
 
 .nav-links a.border-effect::after {
-    content: '';
+    content: ' ';
     position: absolute;
     bottom: 0;
     left: 0;
@@ -126,6 +120,67 @@ nav {
 .nav-links a.border-effect:hover::after {
     transform: scaleX(1);
     transform-origin: left;
+}
+
+/* Responsive Design for nav */
+@media (max-width: 768px) {
+    .nav-links {
+        position: fixed;
+        top: 70px;
+        right: -100%;
+        width: 100%;
+        height: calc(100vh - 70px);
+        background: white;
+        flex-direction: column;
+        padding: 2rem;
+        transition: 0.3s ease;
+        z-index: 999;
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+        z-index: 1000;
+        padding: 0.5rem;
+    }
+
+    .hamburger span {
+        display: block;
+        width: 25px;
+        height: 2px;
+        background: var(--text-primary);
+        margin: 5px 0;
+        transition: 0.3s ease;
+    }
+
+    .hamburger.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .filters {
+        grid-template-columns: 1fr;
+    }
+    
+    .search-section {
+        margin-top: -2rem;
+        padding: 2rem 5%;
+    }
 }
 
 /* Enhanced Hero Section */
@@ -169,6 +224,62 @@ nav {
     max-width: 600px;
     opacity: 0;
     animation: fadeInUp 1s ease-out 0.3s forwards;
+}
+
+/* notification */
+.notification {
+    margin: 2vw auto;
+    width: 70%;
+    height: 10vw;
+    display: flex;
+    align-items: center;
+    border-radius: 2vw;
+    background-color: var(--primary-color);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    position: relative;
+}
+
+.scrolling-text {
+    color: white;
+    display: inline-block;
+    white-space: nowrap;
+    animation: scrolling 10s linear infinite;
+    font-size: 1.5vw;
+}
+
+@keyframes scrolling {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Responsive notification for smaller screens */
+@media (max-width: 768px) {
+    .notification {
+        width: 90%;
+        height: 8vw;
+        border-radius: 1.5vw;
+    }
+
+    .scrolling-text {
+        font-size: 2vw;
+    }
+}
+
+@media (max-width: 480px) {
+    .notification {
+        width: 95%;
+        height: 12vw;
+        border-radius: 2vw;
+    }
+
+    .scrolling-text {
+        font-size: 2vw;
+    }
 }
 
 /* Modern Search Section Styles */
@@ -292,30 +403,6 @@ nav {
     transform: scale(1.05);
 }
 
-/* Enhanced Filter Section */
-.filters {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-    margin-top: 1.5rem;
-    position: relative;
-    padding: 0.5rem;
-}
-
-.filters::before {
-    content: '';
-    position: absolute;
-    top: -1rem;
-    left: 0;
-    right: 0;
-    height: 1px;
-    background: linear-gradient(
-        to right,
-        transparent,
-        rgba(37, 99, 235, 0.1),
-        transparent
-    );
-}
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -497,25 +584,6 @@ nav {
     opacity: 0.7;
 }
 
-/* Responsive styles */
-@media (max-width: 768px) {
-    .filters {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-    }
-
-    .filters .select-wrapper {
-        margin-bottom: 0.5rem;
-    }
-
-    .filters select {
-        padding: 1rem 3rem 1rem 1.25rem;
-    }
-
-    .filters .select-label {
-        font-size: 0.9rem;
-    }
-}
 
 /* Loading state */
 .filters .select-wrapper.loading::after {
@@ -596,6 +664,7 @@ nav {
     }
 
     .search-button {
+        color: white;
         width: 100%;
         justify-content: center;
     }
@@ -680,10 +749,6 @@ nav {
     gap: 0.3rem;
 }
 
-.scheme::before {
-    content: '📚';
-}
-
 .credits::before {
     content: '⭐';
 }
@@ -742,16 +807,6 @@ nav {
     transform: translateY(-5px);
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
 }
-
-/* Add icons to buttons */
-.syllabus-btn::before {
-    content: '📋';
-}
-
-.download-btn::before {
-    content: '📥';
-}
-
 /* Animation for new cards */
 .note-card {
     animation: cardAppear 0.5s ease backwards;
@@ -786,6 +841,7 @@ nav {
 
 /* Enhanced Section Headings */
 section h2 {
+    text-transform: uppercase;
     font-size: 2.5rem;
     text-align: center;
     margin-bottom: 3rem;
@@ -814,67 +870,6 @@ footer {
     padding: 3rem 5%;
     text-align: center;
     margin-top: 4rem;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .nav-links {
-        position: fixed;
-        top: 70px;
-        right: -100%;
-        width: 100%;
-        height: calc(100vh - 70px);
-        background: white;
-        flex-direction: column;
-        padding: 2rem;
-        transition: 0.3s ease;
-        z-index: 999;
-    }
-
-    .nav-links.active {
-        right: 0;
-    }
-
-    .hamburger {
-        display: block;
-        cursor: pointer;
-        z-index: 1000;
-        padding: 0.5rem;
-    }
-
-    .hamburger span {
-        display: block;
-        width: 25px;
-        height: 2px;
-        background: var(--text-primary);
-        margin: 5px 0;
-        transition: 0.3s ease;
-    }
-
-    .hamburger.active span:nth-child(1) {
-        transform: rotate(45deg) translate(5px, 5px);
-    }
-
-    .hamburger.active span:nth-child(2) {
-        opacity: 0;
-    }
-
-    .hamburger.active span:nth-child(3) {
-        transform: rotate(-45deg) translate(5px, -5px);
-    }
-
-    .hero h1 {
-        font-size: 2.5rem;
-    }
-    
-    .filters {
-        grid-template-columns: 1fr;
-    }
-    
-    .search-section {
-        margin-top: -2rem;
-        padding: 2rem 5%;
-    }
 }
 
 /* Loading Animation Enhancement */
@@ -2169,8 +2164,9 @@ nav {
     color: var(--text-secondary);
 }
 
+
 /* Mobile Responsive Styles (max-width: 390px) */
-@media (max-width: 390px) {
+@media (max-width: 768px) {
     /* Navigation */
     nav {
         padding: 0.75rem 1rem;
@@ -2390,3 +2386,4 @@ nav {
         transform: translateY(0);
     }
 }
+
