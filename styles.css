@@ -40,13 +40,20 @@ nav {
     box-shadow: var(--shadow);
 }
 
-.logo h1 {
+/* .logo h1 {
     font-size: 1.5rem;
     font-weight: 700;
     background: linear-gradient(to right, var(--primary-color), var(--accent-color));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-}
+} */
+ .logo img{
+    margin-top: 2.5vh;
+    height: 2.5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
 
 .nav-links {
     display: flex;
@@ -91,14 +98,14 @@ nav {
     color: white;
 }
 
-/* Modern hover effect - Option 2: Glow effect */
+/*  hover effect - Option 2: Glow effect */
 .nav-links a.glow-effect {
     transition: all 0.3s ease;
 }
 
 
 
-/* Modern hover effect - Option 3: Border animation */
+/* Border animation  */
 .nav-links a.border-effect {
     position: relative;
 }
@@ -2169,9 +2176,16 @@ nav {
         padding: 0.75rem 1rem;
     }
 
-    .logo h1 {
+    /* .logo h1 {
         font-size: 1.2rem;
-    }
+    } */
+
+    .logo img{
+      
+        height: 6vw;
+       
+     }
+    
 
     .nav-links {
         padding: 1rem;

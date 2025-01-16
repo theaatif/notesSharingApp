@@ -315,7 +315,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Add scroll event listener
+    // Added scroll event listener
     window.addEventListener('scroll', updateActiveNavLink);
 });
 

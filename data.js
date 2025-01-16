@@ -1,7 +1,7 @@
 
 // Subject Notes Data
 const subjectNotes = [
-    // CSE 3rd Semester 2021 Scheme
+    // //CSE 3rd Semester 2021 Scheme
     {
         id: "21CS32",
         title: "Data Structures and Applications",
@@ -85,7 +85,7 @@ const subjectNotes = [
             }
         ]
     },
-    // ISE 3rd Semester 2021 Scheme
+    // //ISE 3rd Semester 2021 Scheme
     {
         id: "21IS32",
         title: "Information Science and Engineering",
@@ -166,7 +166,7 @@ const subjectNotes = [
             }
         ]
     },
-    // Mechanical Engineering Subjects
+    // //Mechanical Engineering Subjects
     {
         id: "21ME32",
         title: "Engineering Mechanics",
@@ -211,7 +211,7 @@ const subjectNotes = [
             }
         ]
     },
-    // Civil Engineering Subjects
+    // // Civil Engineering Subjects
     {
         id: "21CV32",
         title: "Structural Analysis",
@@ -256,7 +256,7 @@ const subjectNotes = [
             }
         ]
     },
-    // Electrical Engineering Subjects
+    // //Electrical Engineering Subjects
     {
         id: "21EE32",
         title: "Electric Circuit Analysis",
@@ -301,7 +301,7 @@ const subjectNotes = [
             }
         ]
     },
-    // Additional Computer Science Subject
+    // // Additional Computer Science Subject
     {
         id: "21CS33",
         title: "Object Oriented Programming",
