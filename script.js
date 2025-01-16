@@ -70,8 +70,8 @@ function filterAndDisplayNotes() {
     if (filteredSubjects.length === 0) {
         notesContainer.innerHTML = `
             <div class="no-results">
-                <h3>No subjects found</h3>
-                <p>No subjects available for the selected combination of filters</p>
+                <h3>No Notes found</h3>
+                <p>We're adding notes soon—thank you for your patience and support!"</p>
             </div>
         `;
     } else {
@@ -337,4 +337,14 @@ function createParticle(parent) {
     
     parent.appendChild(particle);
 }
+
+// project enquiry
+function redirectToEmail() {
+    const adminEmail = "admin@vtuprojects.in"; 
+    const subject = "Project Enquiry";
+    const body = "Hello, I would like to enquire about the following project:";
+    const mailtoLink = `mailto:${adminEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = mailtoLink;
+}
+
 
